@@ -1,15 +1,16 @@
 plugins {
     id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
     id 'kotlin-parcelize'
 }
 
 android {
-    namespace 'com.example.unlimint'
+    namespace 'com.example.test'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.unlimint"
+        applicationId "com.example.codingtest"
         minSdk 21
         targetSdk 33
         versionCode 1
@@ -38,26 +39,35 @@ android {
 
 dependencies {
 
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.21'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation 'androidx.core:core-ktx:1.9.0'
-
+    implementation "com.google.android.material:material:$material_version"
+    implementation "com.google.android.material:material:$material_version"
     implementation 'androidx.work:work-runtime:2.7.1'
     //koin
     // Koin main features for Android (Scope,ViewModel ...)
-    implementation "io.insert-koin:koin-android:3.3.2"
+    implementation "io.insert-koin:koin-android:$koin_version"
     // Koin Core features
-    implementation "io.insert-koin:koin-core:3.3.2"
+    implementation "io.insert-koin:koin-core:$koin_version"
 // Koin for Jetpack WorkManager
-    implementation "io.insert-koin:koin-androidx-workmanager:3.3.2"
+    implementation "io.insert-koin:koin-androidx-workmanager:$koin_version"
 
     //ViewModel
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     //noinspection LifecycleAnnotationProcessorWithJava8
     annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.6.0-alpha04'
+    implementation 'com.intuit.sdp:sdp-android:1.0.5'
+
+    implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
 
     //retrofit
-    implementation 'androidx.recyclerview:recyclerview:1.2.1'
-    implementation 'com.github.bumptech.glide:glide:4.14.2'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.4.0"
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.3'
 }

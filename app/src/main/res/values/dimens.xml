@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- radius for views-->
+    <dimen name="radius4">4dp</dimen>
+    <dimen name="radius8">8dp</dimen>
+
+    <!-- margin views-->
+    <dimen name="margin5">5dp</dimen>
+    <dimen name="margin8">8dp</dimen>
+    <dimen name="margin10">10dp</dimen>
+
+    <!-- padding views-->
+    <dimen name="padding8">8dp</dimen>
+    <dimen name="padding10">10dp</dimen>
+
+    <!--text label-->
+    <dimen name="text_label18">18sp</dimen>
+    <dimen name="text_label14">14sp</dimen>
+
+</resources>
